@@ -48,12 +48,16 @@ public class TestDemo {
     }
 
     public static void main(String[] args) {
-        List<Integer> res = new ArrayList<>();
-        res.add(1);
-        res.add(1);
-        res.add(1);
-        res.add(1);
-        System.out.println(res.subList(0, 2));
+        List<Integer> res1 = Arrays.asList(1, 2, 3, 4, 5);
+        List<Integer> res2 = Arrays.asList(6, 7, 8, 9);
+
+        List<Integer> res = new ArrayList<>(res1.size() + res2.size());
+        res.addAll(res1);
+        res.addAll(res2);
+
+        List<Integer> ress = res;
+        System.out.println(res);
+        System.out.println(ress);
 
     }
 
