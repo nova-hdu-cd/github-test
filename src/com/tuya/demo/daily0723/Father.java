@@ -7,7 +7,17 @@ package com.tuya.demo.daily0723;
  * Templates.
  */
 public class Father extends GrandFather {
+
+    public String age;
     private String fatherName;
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
 
     public String getFatherName() {
         return fatherName;
@@ -20,7 +30,8 @@ public class Father extends GrandFather {
     @Override
     public String toString() {
         return "Father{" +
-                "fatherName='" + fatherName + '\'' +
+                "age='" + age + '\'' +
+                ", fatherName='" + fatherName + '\'' +
                 '}';
     }
 }
