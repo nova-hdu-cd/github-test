@@ -3,6 +3,8 @@ package com.tuya.demo.sort;
 import java.util.Arrays;
 
 /**
+ * 快速排序
+ *
  * @author chendong
  * @date 2020/8/25 10:25 上午
  * To change this template use Appearance | Editor | File and Code
@@ -23,13 +25,10 @@ public class Partition {
     }
 
     public static int[] partition(int[] arr, int l, int r) {
-
         int p1 = l - 1;
         int p2 = r + 1;
         int cur = l;
-
         int val = arr[r];
-
         while (cur < p2) {
             if (arr[cur] < val) {
                 swap(arr, ++p1, cur++);
@@ -38,7 +37,6 @@ public class Partition {
             } else {
                 cur++;
             }
-
         }
         return new int[] {p1, p2};
     }
@@ -54,6 +52,4 @@ public class Partition {
         sort(arr);
         System.out.println(Arrays.toString(arr));
     }
-
-
 }

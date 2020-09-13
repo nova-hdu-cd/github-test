@@ -3,6 +3,8 @@ package com.tuya.demo.sort;
 import java.util.Arrays;
 
 /**
+ * 归并排序
+ *
  * @author chendong
  * @date 2020/8/25 10:10 上午
  * To change this template use Appearance | Editor | File and Code
@@ -25,13 +27,9 @@ public class Merge {
     }
 
     public static void merge(int[] arr, int l, int m, int r) {
-
         //copy to array
         int[] copyArray = new int[r - l + 1];
-
-        int p1 = l;
-        int p2 = m + 1;
-        int i = 0;
+        int p1 = l, p2 = m + 1, i = 0;
         while (p1 <= m && p2 <= r) {
             copyArray[i++] = arr[p1] < arr[p2] ? arr[p1++] : arr[p2++];
         }
@@ -41,12 +39,10 @@ public class Merge {
         while (p2 <= r) {
             copyArray[i++] = arr[p2++];
         }
-
         //copy return arr
         for (int item : copyArray) {
             arr[l++] = item;
         }
-
     }
 
     public static void main(String[] args) {
