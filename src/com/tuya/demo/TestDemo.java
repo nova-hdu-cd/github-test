@@ -56,9 +56,27 @@ public class TestDemo {
         res.addAll(res2);
 
         List<Integer> ress = res;
-        System.out.println(res);
-        System.out.println(ress);
+        //System.out.println(res);
+        //System.out.println(ress);
 
+        String s1 = "abc";
+        String s2 = "abc";
+        //s13和S2都指向常量池中的字符串"abc"
+        System.out.println(s1 == s2);
+
+        String s3 = new String("abc");
+        String s4 = new String("abc");
+        System.out.println(s1 == s3);
+        System.out.println(s3 == s4);
+
+        Integer[] arr = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
+//        Arrays.sort(arr, 0, arr.length);
+//        System.out.println(Arrays.toString(arr));
+
+        //倒序排
+        Arrays.sort(arr, (a, b) -> b - a);
+        System.out.println(Arrays.toString(arr));
+        
     }
 
 }
